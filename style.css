@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+header {
+    /*Mantengo la posición de mi menu*/
+    position: fixed;
+    /*Alinear hasta arriba sin espacio*/
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    /*Alinear a la derecha*/
+    justify-content: space-between;
+    align-items: center;
+    /*fondo de mi menu*/
+    background-color: rgb(242, 190, 209);
+    /*Ancho de la barra de mi menu*/
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header ul li {
+    margin: 10px;
+}
+
+/*Elimina los subrayado y le asigna color a la letra de los enlaces*/
+a {
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+}
+
+/* Color de los enlaces al pasar el ratón */
+header a:hover {
+    color: rgb(182, 248, 0);
+}
+
+.container {
+    margin-top: 100px; /* Ajusta este valor según la altura de tu header */
+}
+
+.main {
+    width: 100%;
+    margin-top: 100px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main h1,
+.main h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.main p {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 34px;
+    color: rgb(201, 44, 83);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contenedor {
+    /* los elementos que esten dentro de "contenedor" seran flexibles (ubicaciones que se requieran) */
+    display: flex;
+    /*justify-content: space-around;*/
+    /* La ubicación en el caso de row es para que este en fila, es decir, uno a lado del otro */
+    flex-direction: row;
+    width: 100%;
+    /*padding: 20px;*/
+}
+
+.caja {
+    width: 150%;
+    height: 150%;
+    /*relleno*/
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Elementos centrados*/
+    justify-content: center;
+    align-items: center;
+}
+
+.caja img {
+    /*Redondeo de las imagenes*/
+    border-radius: 50%;
+}
+
+footer {
+    /*fondo de mi menu*/
+    background-color: rgb(246, 233, 107);
+    padding: 20px;
+}
+
+.footerconte {
+    display: flex;
+    /* Alinea el contenido a la derecha */
+    justify-content: space-between;
+}
+
+.footerconte h4 {
+    margin-bottom: 15px;
+}
+
+.contacto,
+.rsocial {
+    margin: 10px;
+}
+
+.contacto ul,
+.rsocial ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Color de los enlaces al pasar el ratón */
+.contacto a:hover,
+.rsocial a:hover {
+    color: rgb(0, 87, 248);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin: 5px 0;
+    }
+
+    .main {
+        padding: 180px;
+    }
+
+    .main h1 {
+        font-size: 28px;
+        /* Reducimos el tamaño de la fuente */
+    }
+
+    .main p {
+        font-size: large;
+        /* También reducimos el tamaño de los párrafos */
+    }
+
+    .contenedor {
+        flex-direction: column;
+        /* Los elementos ahora se alinean en columna */
+        align-items: center;
+    }
+
+    .caja {
+        width: 100%;
+        /* Hacemos que las cajas ocupen el ancho completo */
+    }
+    .container {
+        flex-direction: column;
+        /* Los elementos ahora se alinean en columna */
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footerconte {
+        flex-direction: column;
+        /* Cambia a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    footer {
+        text-align: center;
+        /* Centra el texto en el pie de página */
+    }
+
+    .footerconte {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto ul,
+    .rsocial ul {
+        padding: 0;
+    }
+
+    .contacto li,
+    .rsocial li {
+        margin: 5px 0;
+    }
+}
